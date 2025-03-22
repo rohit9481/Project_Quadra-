@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fusion Smart Beta | Energy Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://kit.fontawesome.com/your-font-awesome-kit.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="logo">FUSION SMART BETA</div>
+      <div class="sidebar-menu">
+        <div class="menu-item active"><i class="fas fa-home"></i> Dashboard</div>
+        <div class="menu-item"><i class="fas fa-chart-bar"></i> Analytics</div>
+        <div class="menu-item"><i class="fas fa-trophy"></i> Achievements</div>
+        <div class="menu-item"><i class="fas fa-cog"></i> Settings</div>
+      </div>
+
+      <!-- Gamification Panel -->
+      <div class="gamification-panel">
+        <h3><i class="fas fa-medal"></i> Your Rewards</h3>
+        <div class="badge">Eco Warrior <span>🥇</span></div>
+        <div class="progress-bar">
+          <div class="progress" style="width: 65%"></div>
+          <span>65% to next level</span>
+        </div>
+        <div class="current-points">⭐ 2,340 Points</div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Header -->
+      <div class="header">
+        <div class="header-title">
+          <h1>Energy Dashboard</h1>
+          <p>January 2025</p>
+        </div>
+        <div class="header-stats">
+          <div class="stat-box">
+            <span>Current Cost</span>
+            <h2>$214</h2>
+            <div class="trend up">+5.42%</div>
+          </div>
+          <div class="stat-box">
+            <span>Carbon Saved</span>
+            <h2>34.16g</h2>
+            <div class="trend down">-12%</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dashboard Grid -->
+      <div class="dashboard-grid">
+        <!-- Row 1 -->
+        <div class="card wide">
+          <div class="card-header">
+            <h2><i class="fas fa-bolt"></i> Real-Time Consumption</h2>
+            <div class="chart-legend">
+              <span class="legend-item"><div class="color-hvac"></div> HVAC</span>
+              <span class="legend-item"><div class="color-ev"></div> EV Charger</span>
+            </div>
+          </div>
+          <canvas id="liveChart"></canvas>
+          <div class="chart-note">Peak usage detected at 6:00 PM</div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="card">
+          <div class="card-header">
+            <h2><i class="fas fa-leaf"></i> Carbon Footprint</h2>
+          </div>
+          <canvas id="carbonChart"></canvas>
+          <div class="chart-note">34% below neighborhood average</div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h2><i class="fas fa-gamepad"></i> Active Challenges</h2>
+          </div>
+          <div class="challenge-list">
+            <div class="challenge">
+              <div class="challenge-progress">
+                <div class="progress" style="width: 45%"></div>
+              </div>
+              <span>Reduce HVAC usage by 10% this week</span>
+              <div class="reward">+150 Points</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="card">
+          <div class="card-header">
+            <h2><i class="fas fa-chart-pie"></i> Usage Distribution</h2>
+          </div>
+          <canvas id="usageChart"></canvas>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h2><i class="fas fa-lightbulb"></i> Energy Tips</h2>
+          </div>
+          <div class="tip-of-the-day">
+            <p>"Using smart plugs during off-peak hours can save $120/year"</p>
+            <button class="action-button"><i class="fas fa-check"></i> Mark as Done</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
