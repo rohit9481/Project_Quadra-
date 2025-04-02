@@ -1,0 +1,48 @@
+A constructor in Java is a special method used to initialize objects of a class. It’s called when an object of the class is created and can be used to set initial values for object attributes.
+
+Here are a few key points:
+
+Same Name as Class: The constructor has the same name as the class.
+
+No Return Type: Constructors do not have a return type, not even void.
+
+Automatic Call: It gets called automatically when an object is created.
+
+Types of Constructors:
+
+Default Constructor: No parameters.
+
+Parameterized Constructor: Takes arguments to initialize attributes.
+
+Example:
+
+java
+Copy
+Edit
+public class Car {
+    String model;
+    int year;
+
+    // Default constructor
+    public Car() {
+        model = "Unknown";
+        year = 0;
+    }
+
+    // Parameterized constructor
+    public Car(String model, int year) {
+        this.model = model;
+        this.year = year;
+    }
+
+    public void display() {
+        System.out.println("Model: " + model + ", Year: " + year);
+    }
+
+    public static void main(String[] args) {
+        Car car1 = new Car();  // Calls default constructor
+        Car car2 = new Car("Tesla", 2023);  // Calls parameterized constructor
+        car1.display();
+        car2.display();
+    }
+}
